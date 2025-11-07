@@ -1,0 +1,97 @@
+Solution complète pour "Pad Bash vs Fée Oublibash"
+
+--- Démarrage (après ./creer_jeu.sh) ---
+
+cd RoyaumeBash/Introduction cat lisezmoi.txt
+
+--- NIVEAU 1 : Introduction ---
+
+ls cd foret_sombre cat message.txt cd .. ./sortir.sh
+
+(Le niveau 2 est déverrouillé)
+
+--- NIVEAU 2 : Creation ---
+
+cd ../Creation cat lisezmoi.txt cd atelier touch marteau mkdir caisse_a_outils cp marteau caisse_a_outils/ cd .. ./construire.sh
+
+(Le niveau 3 est déverrouillé)
+
+--- NIVEAU 3 : Recherche ---
+
+cd ../Recherche cat lisezmoi.txt
+
+1. Trouver le fichier
+
+find labyrinthe/ -name "secret.txt"
+
+(Le terminal affichera : labyrinthe/de/fichiers/tres/profonds/secret.txt)
+
+2. Lire le mot de passe
+
+cat labyrinthe/de/fichiers/tres/profonds/secret.txt
+
+(Le terminal affichera : Le mot de passe secret est : 'SESAME')
+
+3. Valider
+
+./chercher.sh
+
+(Quand il demande le mot de passe, tapez :)
+
+SESAME
+
+--- NIVEAU 4 : Permissions ---
+
+cd ../Permissions cat lisezmoi.txt
+
+(On vérifie les permissions actuelles - optionnel)
+
+ls -l
+
+1. Donner la permission de lecture au coffre
+
+chmod +r coffre.txt
+
+2. Donner la permission d'exécution à la clef
+
+chmod +x clef.sh
+
+3. Valider
+
+./deverrouiller.sh
+
+--- NIVEAU 5 : Filtre ---
+
+cd ../Filtre cat lisezmoi.txt
+
+1. Exécuter la commande pour révéler le sort
+
+cat message_corrompu.txt | sed 's/-STOP-//g'
+
+(Le terminal affichera : La Fée Oublibash a corrompu ce message. Le sort est 'MAGIE' .)
+
+2. Valider
+
+./purifier.sh
+
+(Quand il demande le sort, tapez EXACTEMENT :)
+
+'MAGIE'
+
+--- NIVEAU 6 : Boss ---
+
+cd ../Boss cat lisezmoi.txt
+
+1. Aller dans le dossier de l'armée
+
+cd armee
+
+2. Lancer la boucle de renommage
+
+for f in *.txt; do mv "f""{f%.txt}.capture"; done
+
+3. Revenir et valider
+
+cd .. ./combat.sh
+
+--- FIN DU JEU ---

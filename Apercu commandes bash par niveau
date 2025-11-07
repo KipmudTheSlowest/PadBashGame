@@ -1,0 +1,61 @@
+Concepts BASH appris dans "Pad Bash vs Fée Oublibash"
+
+--- NIVEAU 1 : Introduction ---
+
+Thème : Navigation de base
+
+* ls : 'List'. Permet de lister le contenu d'un dossier.
+
+* cd : 'Change Directory'. Permet de se déplacer dans un autre dossier (ex: cd foret_sombre) ou de remonter (ex: cd ..).
+
+* cat : 'Concatenate'. Permet de lire et d'afficher le contenu d'un fichier dans le terminal.
+
+--- NIVEAU 2 : Creation ---
+
+Thème : Création de fichiers et dossiers
+
+* touch : Permet de créer un fichier vide (ex: touch marteau).
+
+* mkdir : 'Make Directory'. Permet de créer un nouveau dossier (ex: mkdir caisse_a_outils).
+
+* cp : 'Copy'. Permet de copier un fichier ou un dossier (ex: cp marteau caisse_a_outils/).
+
+--- NIVEAU 3 : Recherche ---
+
+Thème : Trouver des choses
+
+* find : Permet de rechercher des fichiers ou dossiers dans une arborescence (ex: find . -name "secret.txt").
+
+* grep : Permet de chercher une chaîne de caractères (un mot, une phrase) à l'intérieur d'un fichier (ex: grep "motdepasse" fichier.txt).
+
+--- NIVEAU 4 : Permissions ---
+
+Thème : Droits d'accès
+
+* chmod : 'Change Mode'. Permet de modifier les permissions d'un fichier.
+
+* +r : Ajoute la permission de 'Lecture' (Read).
+
+* +x : Ajoute la permission d' 'Exécution' (Execute), nécessaire pour lancer un script.
+
+* (Concept bonus : ls -l pour voir les permissions actuelles).
+
+--- NIVEAU 5 : Filtre ---
+
+Thème : Pipes et manipulation de texte
+
+* | (Pipe / Tuyau) : Permet de "tuyauter" la sortie d'une commande (gauche) vers l'entrée d'une autre commande (droite).
+
+* sed : 'Stream Editor'. Un outil puissant pour manipuler du texte.
+
+* s/cherche/remplace/g : La commande de base de 'sed' pour 'Substituer' (s) un texte par un autre, de manière 'Globale' (g).
+
+--- NIVEAU 6 : Boss ---
+
+Thème : Scripts et automatisation
+
+* Boucle 'for' : Une structure de script de base pour répéter une action sur une liste d'éléments (ex: for f in *.txt; do ...; done).
+
+* mv : 'Move'. Permet de déplacer ou de renommer un fichier (ex: mv ancien_nom.txt nouveau_nom.txt).
+
+* ${variable%.txt} : Une 'expansion de paramètre' BASH avancée. Cela prend la variable $f et supprime l'extension ".txt" à la fin.
